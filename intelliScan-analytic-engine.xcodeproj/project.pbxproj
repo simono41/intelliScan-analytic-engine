@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B705CB1C2B2CA89400108B38 /* intelliScan_analytic_engineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B705CB1B2B2CA89400108B38 /* intelliScan_analytic_engineApp.swift */; };
+		B705CB1E2B2CA89400108B38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B705CB1D2B2CA89400108B38 /* ContentView.swift */; };
+		B705CB202B2CA89600108B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B705CB1F2B2CA89600108B38 /* Assets.xcassets */; };
+		B705CB242B2CA89600108B38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B705CB232B2CA89600108B38 /* Preview Assets.xcassets */; };
+		B705CB2E2B2CA89600108B38 /* intelliScan_analytic_engineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B705CB2D2B2CA89600108B38 /* intelliScan_analytic_engineTests.swift */; };
+		B705CB382B2CA89600108B38 /* intelliScan_analytic_engineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B705CB372B2CA89600108B38 /* intelliScan_analytic_engineUITests.swift */; };
+		B705CB3A2B2CA89600108B38 /* intelliScan_analytic_engineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B705CB392B2CA89600108B38 /* intelliScan_analytic_engineUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B705CB2A2B2CA89600108B38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B705CB102B2CA89400108B38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B705CB172B2CA89400108B38;
+			remoteInfo = "intelliScan-analytic-engine";
+		};
+		B705CB342B2CA89600108B38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B705CB102B2CA89400108B38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B705CB172B2CA89400108B38;
+			remoteInfo = "intelliScan-analytic-engine";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B705CB182B2CA89400108B38 /* intelliScan-analytic-engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "intelliScan-analytic-engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B705CB1B2B2CA89400108B38 /* intelliScan_analytic_engineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intelliScan_analytic_engineApp.swift; sourceTree = "<group>"; };
+		B705CB1D2B2CA89400108B38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B705CB1F2B2CA89600108B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B705CB212B2CA89600108B38 /* intelliScan_analytic_engine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = intelliScan_analytic_engine.entitlements; sourceTree = "<group>"; };
+		B705CB232B2CA89600108B38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B705CB292B2CA89600108B38 /* intelliScan-analytic-engineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "intelliScan-analytic-engineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B705CB2D2B2CA89600108B38 /* intelliScan_analytic_engineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intelliScan_analytic_engineTests.swift; sourceTree = "<group>"; };
+		B705CB332B2CA89600108B38 /* intelliScan-analytic-engineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "intelliScan-analytic-engineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B705CB372B2CA89600108B38 /* intelliScan_analytic_engineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intelliScan_analytic_engineUITests.swift; sourceTree = "<group>"; };
+		B705CB392B2CA89600108B38 /* intelliScan_analytic_engineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intelliScan_analytic_engineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B705CB152B2CA89400108B38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B705CB262B2CA89600108B38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B705CB302B2CA89600108B38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B705CB0F2B2CA89400108B38 = {
+			isa = PBXGroup;
+			children = (
+				B705CB1A2B2CA89400108B38 /* intelliScan-analytic-engine */,
+				B705CB2C2B2CA89600108B38 /* intelliScan-analytic-engineTests */,
+				B705CB362B2CA89600108B38 /* intelliScan-analytic-engineUITests */,
+				B705CB192B2CA89400108B38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B705CB192B2CA89400108B38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B705CB182B2CA89400108B38 /* intelliScan-analytic-engine.app */,
+				B705CB292B2CA89600108B38 /* intelliScan-analytic-engineTests.xctest */,
+				B705CB332B2CA89600108B38 /* intelliScan-analytic-engineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B705CB1A2B2CA89400108B38 /* intelliScan-analytic-engine */ = {
+			isa = PBXGroup;
+			children = (
+				B705CB1B2B2CA89400108B38 /* intelliScan_analytic_engineApp.swift */,
+				B705CB1D2B2CA89400108B38 /* ContentView.swift */,
+				B705CB1F2B2CA89600108B38 /* Assets.xcassets */,
+				B705CB212B2CA89600108B38 /* intelliScan_analytic_engine.entitlements */,
+				B705CB222B2CA89600108B38 /* Preview Content */,
+			);
+			path = "intelliScan-analytic-engine";
+			sourceTree = "<group>";
+		};
+		B705CB222B2CA89600108B38 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B705CB232B2CA89600108B38 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B705CB2C2B2CA89600108B38 /* intelliScan-analytic-engineTests */ = {
+			isa = PBXGroup;
+			children = (
+				B705CB2D2B2CA89600108B38 /* intelliScan_analytic_engineTests.swift */,
+			);
+			path = "intelliScan-analytic-engineTests";
+			sourceTree = "<group>";
+		};
+		B705CB362B2CA89600108B38 /* intelliScan-analytic-engineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B705CB372B2CA89600108B38 /* intelliScan_analytic_engineUITests.swift */,
+				B705CB392B2CA89600108B38 /* intelliScan_analytic_engineUITestsLaunchTests.swift */,
+			);
+			path = "intelliScan-analytic-engineUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B705CB172B2CA89400108B38 /* intelliScan-analytic-engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B705CB3D2B2CA89600108B38 /* Build configuration list for PBXNativeTarget "intelliScan-analytic-engine" */;
+			buildPhases = (
+				B705CB142B2CA89400108B38 /* Sources */,
+				B705CB152B2CA89400108B38 /* Frameworks */,
+				B705CB162B2CA89400108B38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "intelliScan-analytic-engine";
+			productName = "intelliScan-analytic-engine";
+			productReference = B705CB182B2CA89400108B38 /* intelliScan-analytic-engine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B705CB282B2CA89600108B38 /* intelliScan-analytic-engineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B705CB402B2CA89600108B38 /* Build configuration list for PBXNativeTarget "intelliScan-analytic-engineTests" */;
+			buildPhases = (
+				B705CB252B2CA89600108B38 /* Sources */,
+				B705CB262B2CA89600108B38 /* Frameworks */,
+				B705CB272B2CA89600108B38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B705CB2B2B2CA89600108B38 /* PBXTargetDependency */,
+			);
+			name = "intelliScan-analytic-engineTests";
+			productName = "intelliScan-analytic-engineTests";
+			productReference = B705CB292B2CA89600108B38 /* intelliScan-analytic-engineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B705CB322B2CA89600108B38 /* intelliScan-analytic-engineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B705CB432B2CA89600108B38 /* Build configuration list for PBXNativeTarget "intelliScan-analytic-engineUITests" */;
+			buildPhases = (
+				B705CB2F2B2CA89600108B38 /* Sources */,
+				B705CB302B2CA89600108B38 /* Frameworks */,
+				B705CB312B2CA89600108B38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B705CB352B2CA89600108B38 /* PBXTargetDependency */,
+			);
+			name = "intelliScan-analytic-engineUITests";
+			productName = "intelliScan-analytic-engineUITests";
+			productReference = B705CB332B2CA89600108B38 /* intelliScan-analytic-engineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B705CB102B2CA89400108B38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B705CB172B2CA89400108B38 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					B705CB282B2CA89600108B38 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = B705CB172B2CA89400108B38;
+					};
+					B705CB322B2CA89600108B38 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = B705CB172B2CA89400108B38;
+					};
+				};
+			};
+			buildConfigurationList = B705CB132B2CA89400108B38 /* Build configuration list for PBXProject "intelliScan-analytic-engine" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B705CB0F2B2CA89400108B38;
+			productRefGroup = B705CB192B2CA89400108B38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B705CB172B2CA89400108B38 /* intelliScan-analytic-engine */,
+				B705CB282B2CA89600108B38 /* intelliScan-analytic-engineTests */,
+				B705CB322B2CA89600108B38 /* intelliScan-analytic-engineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B705CB162B2CA89400108B38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B705CB242B2CA89600108B38 /* Preview Assets.xcassets in Resources */,
+				B705CB202B2CA89600108B38 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B705CB272B2CA89600108B38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B705CB312B2CA89600108B38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B705CB142B2CA89400108B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B705CB1E2B2CA89400108B38 /* ContentView.swift in Sources */,
+				B705CB1C2B2CA89400108B38 /* intelliScan_analytic_engineApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B705CB252B2CA89600108B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B705CB2E2B2CA89600108B38 /* intelliScan_analytic_engineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B705CB2F2B2CA89600108B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B705CB3A2B2CA89600108B38 /* intelliScan_analytic_engineUITestsLaunchTests.swift in Sources */,
+				B705CB382B2CA89600108B38 /* intelliScan_analytic_engineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B705CB2B2B2CA89600108B38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B705CB172B2CA89400108B38 /* intelliScan-analytic-engine */;
+			targetProxy = B705CB2A2B2CA89600108B38 /* PBXContainerItemProxy */;
+		};
+		B705CB352B2CA89600108B38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B705CB172B2CA89400108B38 /* intelliScan-analytic-engine */;
+			targetProxy = B705CB342B2CA89600108B38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B705CB3B2B2CA89600108B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B705CB3C2B2CA89600108B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B705CB3E2B2CA89600108B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "intelliScan-analytic-engine/intelliScan_analytic_engine.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"intelliScan-analytic-engine/Preview Content\"";
+				DEVELOPMENT_TEAM = X3U84U8A6F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rieger.app.intelliScan-analytic-engine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B705CB3F2B2CA89600108B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "intelliScan-analytic-engine/intelliScan_analytic_engine.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"intelliScan-analytic-engine/Preview Content\"";
+				DEVELOPMENT_TEAM = X3U84U8A6F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rieger.app.intelliScan-analytic-engine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B705CB412B2CA89600108B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X3U84U8A6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rieger.app.intelliScan-analytic-engineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/intelliScan-analytic-engine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/intelliScan-analytic-engine";
+			};
+			name = Debug;
+		};
+		B705CB422B2CA89600108B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X3U84U8A6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rieger.app.intelliScan-analytic-engineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/intelliScan-analytic-engine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/intelliScan-analytic-engine";
+			};
+			name = Release;
+		};
+		B705CB442B2CA89600108B38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X3U84U8A6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rieger.app.intelliScan-analytic-engineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "intelliScan-analytic-engine";
+			};
+			name = Debug;
+		};
+		B705CB452B2CA89600108B38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X3U84U8A6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "rieger.app.intelliScan-analytic-engineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "intelliScan-analytic-engine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B705CB132B2CA89400108B38 /* Build configuration list for PBXProject "intelliScan-analytic-engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B705CB3B2B2CA89600108B38 /* Debug */,
+				B705CB3C2B2CA89600108B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B705CB3D2B2CA89600108B38 /* Build configuration list for PBXNativeTarget "intelliScan-analytic-engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B705CB3E2B2CA89600108B38 /* Debug */,
+				B705CB3F2B2CA89600108B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B705CB402B2CA89600108B38 /* Build configuration list for PBXNativeTarget "intelliScan-analytic-engineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B705CB412B2CA89600108B38 /* Debug */,
+				B705CB422B2CA89600108B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B705CB432B2CA89600108B38 /* Build configuration list for PBXNativeTarget "intelliScan-analytic-engineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B705CB442B2CA89600108B38 /* Debug */,
+				B705CB452B2CA89600108B38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B705CB102B2CA89400108B38 /* Project object */;
+}
