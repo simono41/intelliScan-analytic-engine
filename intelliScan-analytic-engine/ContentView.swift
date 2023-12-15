@@ -6,121 +6,137 @@
 //
 
 import SwiftUI
+import AVFoundation
 import Vision
 
-struct ContentView: View {
+struct LiveTextRecognitionView: View {
     @State private var recognizedText = ""
-    @State private var showingImagePicker = false
-    @State private var showingCamera = false
-    @State private var selectedImage: UIImage?
 
     var body: some View {
         VStack {
-            Button("Bild auswählen") {
-                self.showingImagePicker.toggle()
-            }
-            .sheet(isPresented: $showingImagePicker, onDismiss: recognizeText) {
-                ImagePicker(selectedImage: self.$selectedImage, sourceType: .photoLibrary)
-            }
+            CameraView(recognizedText: $recognizedText)
+                .edgesIgnoringSafeArea(.all)
+                .onDisappear {
+                    CameraView.stopSession()
+                }
 
-            Button("Kamera verwenden") {
-                self.showingCamera.toggle()
-            }
-            .sheet(isPresented: $showingCamera, onDismiss: recognizeText) {
-                ImagePicker(selectedImage: self.$selectedImage, sourceType: .camera)
-            }
-
-            if let selectedImage = selectedImage {
-                Image(uiImage: selectedImage)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-                    .padding()
-
-                Text("Erkannter Text:")
-                Text(recognizedText)
-                    .padding()
-            }
-        }
-    }
-
-    func recognizeText() {
-        guard let selectedImage = selectedImage, let cgImage = selectedImage.cgImage else {
-            return
-        }
-
-        let request = VNRecognizeTextRequest(completionHandler: { (request, error) in
-            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
-
-            var recognizedText = ""
-            for observation in observations {
-                guard let topCandidate = observation.topCandidates(1).first else { continue }
-                recognizedText += topCandidate.string + "\n"
-            }
-
-            self.recognizedText = recognizedText
-        })
-
-        let requestHandler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-
-        do {
-            try requestHandler.perform([request])
-        } catch {
-            print("Error performing OCR: \(error)")
+            Text("Live erkannter Text:")
+                .padding()
+            Text(recognizedText)
+                .padding()
+                .background(Color.white.opacity(0.7))
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LiveTextRecognitionView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LiveTextRecognitionView()
     }
 }
 
-struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var selectedImage: UIImage?
-    var sourceType: UIImagePickerController.SourceType
+struct CameraView: UIViewRepresentable {
+    @Binding var recognizedText: String
 
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        let parent: ImagePicker
+    class Coordinator: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
+        var recognizedText: Binding<String>
+        var request: VNRecognizeTextRequest?
 
-        init(parent: ImagePicker) {
-            self.parent = parent
+        init(recognizedText: Binding<String>) {
+            self.recognizedText = recognizedText
+            super.init()
+
+            setupVision()
         }
 
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let uiImage = info[.originalImage] as? UIImage {
-                parent.selectedImage = uiImage
+        func setupVision() {
+            request = VNRecognizeTextRequest(completionHandler: { (request, error) in
+                guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+
+                var recognizedText = ""
+                for observation in observations {
+                    guard let topCandidate = observation.topCandidates(1).first else { continue }
+                    recognizedText += topCandidate.string + "\n"
+                }
+
+                self.recognizedText.wrappedValue = recognizedText
+            })
+
+            request?.recognitionLevel = .accurate
+        }
+
+        func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+            guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+
+            let handler = VNImageRequestHandler(cvPixelBuffer: imageBuffer, options: [:])
+
+            do {
+                try handler.perform([request!])
+            } catch {
+                print("Error performing OCR: \(error)")
             }
-
-            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 
-    var imagePickerController: UIImagePickerController
-    @Environment(\.presentationMode) var presentationMode
+    static var session: AVCaptureSession?
 
-    init(selectedImage: Binding<UIImage?>, sourceType: UIImagePickerController.SourceType) {
-        _selectedImage = selectedImage
-        self.sourceType = sourceType
-        imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = sourceType
-        imagePickerController.allowsEditing = false
+    static func startSession() {
+        session?.startRunning()
     }
 
-    func makeUIViewController(context: Context) -> UIImagePickerController {
-        imagePickerController.delegate = context.coordinator
-        return imagePickerController
+    static func stopSession() {
+        session?.stopRunning()
     }
-
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
 
     func makeCoordinator() -> Coordinator {
-        return Coordinator(parent: self)
+        return Coordinator(recognizedText: $recognizedText)
     }
-}
 
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
 
-#Preview {
-    ContentView()
+        let session = AVCaptureSession()
+
+        guard let device = AVCaptureDevice.default(for: .video) else { return view }
+        let input = try? AVCaptureDeviceInput(device: device)
+
+        if session.canAddInput(input!) {
+            session.addInput(input!)
+        }
+
+        let output = AVCaptureVideoDataOutput()
+        output.setSampleBufferDelegate(context.coordinator, queue: DispatchQueue(label: "cameraQueue"))
+
+        if session.canAddOutput(output) {
+            session.addOutput(output)
+        }
+
+        // Todo: get PreviewLayer working
+        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+        previewLayer.videoGravity = .resizeAspectFill
+        previewLayer.frame = view.layer.bounds
+        view.layer.addSublayer(previewLayer)
+
+        CameraView.session = session
+
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+        uiView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+
+        if context.coordinator.request == nil {
+            context.coordinator.setupVision()
+        }
+
+        if AVCaptureDevice.authorizationStatus(for: .video) == .authorized {
+            CameraView.startSession()
+        } else {
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    CameraView.startSession()
+                }
+            }
+        }
+    }
 }
