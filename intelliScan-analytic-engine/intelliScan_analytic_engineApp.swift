@@ -11,7 +11,7 @@ import SwiftUI
 struct intelliScan_analytic_engineApp: App {
     var body: some Scene {
         WindowGroup {
-            LiveTextRecognitionView()
+            ContentView()
         }
     }
 }
