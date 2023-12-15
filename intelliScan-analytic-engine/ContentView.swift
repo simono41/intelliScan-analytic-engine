@@ -13,28 +13,46 @@ struct ContentView: View {
     @State private var recognizedText: String = ""
     @State private var isShowingPopup = false
     @State private var matchedLines: [String] = []
+    @State private var textRectangles: [RectangleData] = []
 
     var body: some View {
-            VStack {
-                CameraView(recognizedText: $recognizedText, isShowingPopup: $isShowingPopup, matchedLines: $matchedLines)
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            CameraView(recognizedText: $recognizedText, isShowingPopup: $isShowingPopup, matchedLines: $matchedLines, textRectangles: $textRectangles)
+                .edgesIgnoringSafeArea(.all)
+
+            // Overlay für die Rechtecke
+            ForEach(textRectangles) { rectangleData in
+                Rectangle()
+                    .stroke(Color.green, lineWidth: 2)
+                    .frame(width: rectangleData.rect.width, height: rectangleData.rect.height)
+                    .position(x: rectangleData.rect.midX, y: rectangleData.rect.midY)
+                    .rotationEffect(Angle(degrees: 270))
             }
-            .alert(isPresented: $isShowingPopup) {
-                Alert(
-                    title: Text("Text Match Found"),
-                    message: Text("Found matching text: \(matchedLines.joined(separator: "\n"))"),
-                    dismissButton: .default(Text("OK")) {
-                        // Hier kannst du zusätzlichen Code für das Schließen des Popups hinzufügen
-                    }
-                )
-            }
+            //Text("Recognized Text: \(recognizedText)")
+            //                .padding()
         }
+        .alert(isPresented: $isShowingPopup) {
+            Alert(
+                title: Text("Text Match Found"),
+                message: Text("Found matching text: \(matchedLines.joined(separator: "\n"))"),
+                dismissButton: .default(Text("OK")) {
+                    // Hier kannst du zusätzlichen Code für das Schließen des Popups hinzufügen
+                }
+            )
+        }
+    }
+}
+
+struct RectangleData: Identifiable {
+    var id: UUID
+    var rect: CGRect
 }
 
 struct CameraView: UIViewControllerRepresentable {
     @Binding var recognizedText: String
     @Binding var isShowingPopup: Bool
     @Binding var matchedLines: [String]
+    @Binding var textRectangles: [RectangleData]
 
     class Coordinator: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         var parent: CameraView
@@ -57,8 +75,15 @@ struct CameraView: UIViewControllerRepresentable {
                         observation.topCandidates(1).first?.string
                     }.joined(separator: "\n")
 
+                    let rectangles = results.map { observation in
+                        let boundingBox = observation.boundingBox
+                        let transformedRect = self.parent.transformRect(boundingBox)
+                        return RectangleData(id: UUID(), rect: transformedRect)
+                    }
+
                     DispatchQueue.main.async {
                         self.parent.recognizedText = text
+                        self.parent.textRectangles = rectangles
                         print(text)
                         self.parent.checkForRegexMatch(text)
                     }
@@ -123,12 +148,12 @@ struct CameraView: UIViewControllerRepresentable {
 
         isShowingPopup = !matchedLines.isEmpty
     }
-    
+
     func percentageMatch(text: String, pattern: String) -> Double? {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
             return nil
         }
-        
+
         let range = NSRange(location: 0, length: text.utf16.count)
         if let match = regex.firstMatch(in: text, options: [], range: range) {
             let matchLength = match.range.length
@@ -137,7 +162,15 @@ struct CameraView: UIViewControllerRepresentable {
             print("\(text) Match Percentage: \(matchPercentage)%")
             return matchPercentage
         }
-        
+
         return 0.0
+    }
+
+    func transformRect(_ rect: CGRect) -> CGRect {
+        let previewSize = UIScreen.main.bounds.size
+        var transformedRect = VNImageRectForNormalizedRect(rect, Int(previewSize.width), Int(previewSize.height))
+        transformedRect.origin.x = previewSize.width - transformedRect.origin.x - transformedRect.size.width
+        
+        return transformedRect
     }
 }
