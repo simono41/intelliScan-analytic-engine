@@ -26,10 +26,11 @@ struct ContentView: View {
                     .stroke(Color.green, lineWidth: 2)
                     .frame(width: rectangleData.rect.width, height: rectangleData.rect.height)
                     .position(x: rectangleData.rect.midX, y: rectangleData.rect.midY)
-                    .rotationEffect(Angle(degrees: 270))
+                    .rotationEffect(Angle(degrees: 90))
             }
-            //Text("Recognized Text: \(recognizedText)")
-            //                .padding()
+            Text("Recognized Text: \(recognizedText)")
+                .padding()
+                .offset(x: 0, y: 200)
         }
         .alert(isPresented: $isShowingPopup) {
             Alert(
@@ -169,8 +170,10 @@ struct CameraView: UIViewControllerRepresentable {
     func transformRect(_ rect: CGRect) -> CGRect {
         let previewSize = UIScreen.main.bounds.size
         var transformedRect = VNImageRectForNormalizedRect(rect, Int(previewSize.width), Int(previewSize.height))
-        transformedRect.origin.x = previewSize.width - transformedRect.origin.x - transformedRect.size.width
         
+        // Spiegelung der Y-Achse anpassen
+        transformedRect.origin.y = previewSize.height - transformedRect.origin.y - transformedRect.size.height
+
         return transformedRect
     }
 }
